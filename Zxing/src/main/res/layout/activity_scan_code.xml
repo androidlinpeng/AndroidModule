@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 扫描框上面的布局 -->
+    <RelativeLayout
+        android:id="@+id/top_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/capture_crop_view"
+        android:background="#7f000000">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:background="@color/bar_sub_transparent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:tint="@android:color/white"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="扫一扫"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:id="@+id/photo_albnm"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="相册"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_scan_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- 扫描框底部的布局 -->
+    <RelativeLayout
+        android:id="@+id/bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/capture_crop_view"
+        android:background="#7f000000">
+
+        <TextView
+            android:id="@+id/scan_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="将二维码对入取景框，即可自动扫描"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/iv_light"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/scan_hint"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/scan2code_icon_light_sel"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- 扫描框中间的布局 -->
+    <RelativeLayout
+        android:id="@+id/capture_crop_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/left_mask"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_toLeftOf="@+id/capture_crop_view1"
+            android:background="#7f000000"
+            android:contentDescription="@string/app_androidlin" />
+
+        <ImageView
+            android:id="@+id/right_mask"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_toRightOf="@+id/capture_crop_view1"
+            android:background="#7f000000" />
+
+        <RelativeLayout
+            android:id="@+id/capture_crop_view1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/capture_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_scanline" />
+
+        <com.apicloud.code.defineview.MyImageView
+            android:id="@+id/scan_image"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

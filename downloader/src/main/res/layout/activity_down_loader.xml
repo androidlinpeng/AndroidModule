@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.downloader.DownLoaderActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/apk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apk"
+        android:onClick="onClick"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/apk1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="apk1"
+        tools:ignore="OnClick"/>
+
+    <Button
+        android:id="@+id/mp4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mp4"
+        android:onClick="onClick"
+        tools:ignore="OnClick"
+        app:layout_constraintLeft_toRightOf="@+id/apk" />
+
+    <Button
+        android:id="@+id/zip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zip"
+        android:onClick="onClick"
+        tools:ignore="OnClick"/>
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="列表"
+        android:onClick="onClick"
+        tools:ignore="OnClick"/>
+
+
+</LinearLayout>

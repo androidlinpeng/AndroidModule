@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imageContainer"
+    android:background="@color/media_color_loading"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <ListView
+        android:id="@+id/mediaListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="8dp"
+        android:background="@android:color/white"
+        android:divider="@null"/>
+
+</RelativeLayout>

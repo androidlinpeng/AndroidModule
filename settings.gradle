@@ -1,0 +1,1 @@
+include ':app', ':medialibrary', ':videocompressor', ':camera', ':cropper', ':downloader', ':baselibrary', ':okhttp', ':Zxing'

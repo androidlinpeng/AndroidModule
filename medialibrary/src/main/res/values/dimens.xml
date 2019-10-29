@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="media_topbar_height">50dp</dimen>
+    <dimen name="media_topbar_title_size">18sp</dimen>
+    <dimen name="media_image_thumbnail_size">100dp</dimen>
+    <dimen name="media_image_thumbnail_spacing">2dp</dimen>
+
+</resources>

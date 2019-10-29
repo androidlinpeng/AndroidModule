@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorMediaTheme">#fdfdfd</color>
+    <color name="colorMediaThemeDark">#d2d2d2</color>
+    <color name="media_color_loading">#d2000000</color>
+    <color name="media_color_title_select">#212121</color>
+    <color name="media_color_title_normal">#818181</color>
+    <color name="media_color_title">#2d2c2c</color>
+    <color name="media_color_content">#a7a7a7</color>
+    <color name="media_color_gray">#5b5b5b</color>
+
+    <color name="media_transparent">#00000000</color>
+    <color name="media_transparentDark">#f6333333</color>
+
+    <color name="media_green">#44bf19</color>
+    <color name="media_grayDark">#d4d4d4</color>
+
+</resources>

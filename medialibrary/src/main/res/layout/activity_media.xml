@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/media_color_title_select"
+    tools:context=".MediaActivity">
+
+    <include layout="@layout/media_top_bar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/topBar">
+
+        <GridView
+            android:id="@+id/gv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="@dimen/media_image_thumbnail_spacing"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/media_image_thumbnail_spacing" />
+
+        <include layout="@layout/media_view_menu_list" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_below="@+id/topBar"
+        android:background="@color/media_color_title_select" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_above="@+id/bottom"
+        android:background="@color/media_color_title_select" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorMediaTheme">
+
+        <TextView
+            android:id="@+id/mediaType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="所有图片 "
+            android:textColor="@color/media_color_title_select"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="预览"
+            android:textColor="@color/media_color_title_select"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/media_view_image_preview" />
+
+    <include layout="@layout/media_status_bar" />
+
+    <include layout="@layout/media_view_image_preview_control" />
+
+</RelativeLayout>

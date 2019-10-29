@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">medialibrary</string>
+    <string name="str_compressor_wait">正在压缩%s</string>
+</resources>
